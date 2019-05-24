@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"encoding/json"
+	"fmt"
 	"net/http"
 	"sqnc/store/mysql"
 )
@@ -13,14 +13,13 @@ type Controller struct {
 func (c Controller) AddSequence() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		res := c.Order.AddSequence()
-		json.NewEncoder(w).Encode(res)
+		fmt.Println(res)
 	}
 }
 
 func (c Controller) AddAutoincrement() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		res := c.Order.AddAutoincrement()
-
-		json.NewEncoder(w).Encode(res)
+		fmt.Println(res)
 	}
 }
