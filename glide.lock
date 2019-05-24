@@ -1,0 +1,14 @@
+hash: ff8be4f0dd0619f416cd213b2165ae2bb00f3ac08c00871fe117757efa4d866a
+updated: 2019-05-24T10:50:48.009912651+03:00
+imports:
+- name: github.com/go-sql-driver/mysql
+  version: 72cd26f257d44c1114970e19afddcd812016007e
+- name: github.com/gorilla/mux
+  version: ed099d42384823742bba0bf9a72b53b55c9e2e38
+- name: github.com/kelseyhightower/envconfig
+  version: f611eb38b3875cc3bd991ca91c51d06446afa14c
+- name: gopkg.in/doug-martin/goqu.v5
+  version: 6803bc2ea3462276f0e87814761a787d5537c4eb
+  subpackages:
+  - adapters/mysql
+testImports: []
