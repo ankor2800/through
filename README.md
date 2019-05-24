@@ -10,7 +10,7 @@ mkdir -p ~/go/src/through/
 Склонировать код проекта в созданный каталог:
 ```
 cd ~/go/src/through/
-git clone https://github.com/ankor2800/sqnc.git .
+git clone https://github.com/ankor2800/through.git .
 ```
 
 Установить менеджер зависимостей `glide` и с помощью его установить все нужные пакеты
