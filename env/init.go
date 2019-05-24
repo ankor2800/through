@@ -13,12 +13,13 @@ var (
 )
 
 type config struct {
-	DBHost     string `envconfig:"DB_HOST" default:"127.0.0.1"`
-	DBPort     int    `envconfig:"DB_PORT" default:"3306"`
-	DBDatabase string `envconfig:"DB_DATABASE" default:"default"`
-	DBUser     string `envconfig:"DB_USERNAME" default:"default"`
-	DBPassword string `envconfig:"DB_PASSWORD" default:""`
-	DBDebug    bool   `envconfig:"DB_DEBUG" default:"false"`
+	DBHost      string `envconfig:"DB_HOST" default:"127.0.0.1"`
+	DBPort      int    `envconfig:"DB_PORT" default:"3306"`
+	DBDatabase  string `envconfig:"DB_DATABASE" default:"default"`
+	DBUser      string `envconfig:"DB_USERNAME" default:"default"`
+	DBPassword  string `envconfig:"DB_PASSWORD" default:""`
+	DBDebug     bool   `envconfig:"DB_DEBUG" default:"false"`
+	InsertCount int    `envconfig:"INSERT_COUNT" default:"1000"`
 }
 
 func init() {

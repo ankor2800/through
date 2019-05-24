@@ -3,6 +3,7 @@ package mysql
 import (
 	"fmt"
 	"gopkg.in/doug-martin/goqu.v5"
+	"through/env"
 	"time"
 )
 
@@ -29,7 +30,7 @@ func NewOrderRepo(db *goqu.Database) *OrderRepo {
 func (r OrderRepo) AddThrough() bool {
 	var table int64 = 1
 
-	for i := 1; i <= 1000; i++ {
+	for i := 1; i <= env.Config.InsertCount; i++ {
 
 		result, err := r.db.
 			From(goqu.I("through")).

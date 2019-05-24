@@ -25,11 +25,12 @@ golangci-lint run
 
 ### ENV
 ```
-DB_HOST
-DB_PORT
-DB_USERNAME
-DB_PASSWORD
-DB_DATABASE
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_USERNAME=default
+DB_PASSWORD=
+DB_DATABASE=default
+INSERT_COUNT=1000 // кол-во заказов
 ```
 
 ### Controllers
