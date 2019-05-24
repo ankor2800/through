@@ -6,9 +6,9 @@ import (
 	"gopkg.in/doug-martin/goqu.v5"
 	"log"
 	"net/http"
-	"sqnc/controllers"
-	"sqnc/env"
-	"sqnc/store/mysql"
+	"through/controllers"
+	"through/env"
+	"through/store/mysql"
 )
 
 func main() {
@@ -24,8 +24,7 @@ func main() {
 	controller := controllers.Controller{
 		Order: orders,
 	}
-
-	router.HandleFunc("/add/sqnc", controller.AddSequence()).Methods("POST")
+	router.HandleFunc("/add/through", controller.AddSequence()).Methods("POST")
 	router.HandleFunc("/add/auto", controller.AddAutoincrement()).Methods("POST")
 
 	log.Fatal(http.ListenAndServe(":8000", router))

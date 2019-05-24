@@ -4,12 +4,12 @@
 
 Создать каталог проекта обязательно внутри `$GOPATH` (по умолчанию `~/go`):
 ```
-mkdir -p ~/go/src/sqnc/
+mkdir -p ~/go/src/through/
 ```
 
 Склонировать код проекта в созданный каталог:
 ```
-cd ~/go/src/sqnc/
+cd ~/go/src/through/
 git clone https://github.com/ankor2800/sqnc.git .
 ```
 
@@ -34,10 +34,11 @@ DB_DATABASE
 
 ### Controllers
 
-#### /add/sqnc
+#### /add/through
 ##### POST
 ##### Desription
-Запрос на заполнение трёх таблиц заказов `orders_1`, `orders_2`, `orders_3`, со сквозными ID через общую таблицу `sequence` с `autoincrement id` заполняемую `INSERT INTO`.
+Запрос на заполнение трёх таблиц заказов `orders_1`, `orders_2`, `orders_3`, со сквозными ID
+через общую таблицу `through` с `autoincrement id` заполняемую `INSERT INTO`.
 
 #### /add/auto
 ##### POST

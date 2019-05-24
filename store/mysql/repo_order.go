@@ -26,13 +26,13 @@ func NewOrderRepo(db *goqu.Database) *OrderRepo {
 	}
 }
 
-func (r OrderRepo) AddSequence() bool {
+func (r OrderRepo) AddThrough() bool {
 	var table int64 = 1
 
 	for i := 1; i <= 1000; i++ {
 
 		result, err := r.db.
-			From(goqu.I("sequence")).
+			From(goqu.I("through")).
 			Insert(sequenceRow{Date: time.Now()}).
 			Exec()
 

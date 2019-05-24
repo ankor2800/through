@@ -3,7 +3,7 @@ package controllers
 import (
 	"fmt"
 	"net/http"
-	"sqnc/store/mysql"
+	"through/store/mysql"
 )
 
 type Controller struct {
@@ -12,7 +12,7 @@ type Controller struct {
 
 func (c Controller) AddSequence() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		res := c.Order.AddSequence()
+		res := c.Order.AddThrough()
 		fmt.Println(res)
 	}
 }
