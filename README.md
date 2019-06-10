@@ -19,6 +19,11 @@ go get -u github.com/Masterminds/glide
 glide install
 ```
 
+### Migrations
+
+Для миграций бд использован пакет `github.com/rubenv/sql-migrate`.
+Миграции будут применены при первом запуске приложения.
+
 ### ENV
 ```
 DB_HOST=127.0.0.1
