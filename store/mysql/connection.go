@@ -8,6 +8,8 @@ import (
 	goqu "gopkg.in/doug-martin/goqu.v5"
 
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/gobuffalo/packr"
+	"github.com/rubenv/sql-migrate"
 	// Регистрация адаптера mysql
 	_ "gopkg.in/doug-martin/goqu.v5/adapters/mysql"
 )
@@ -24,7 +26,7 @@ type ConnectionOptions struct {
 
 // Addr адрес соединеия
 func (o *ConnectionOptions) Addr() string {
-	return fmt.Sprintf("%s:%s@(%s:%d)/%s", o.User, o.Pass, o.Host, o.Port, o.Name)
+	return fmt.Sprintf("%s:%s@(%s:%d)/%s?parseTime=true", o.User, o.Pass, o.Host, o.Port, o.Name)
 }
 
 // CensoredAddr адрес соединеия со скрытым паролем
@@ -57,5 +59,18 @@ func NewConnection(o *ConnectionOptions) (*goqu.Database, error) {
 	// будет логировать все запросы в консоль
 	db := goqu.New("mysql", con)
 
+	// папка с файлами миграций
+	migrations := &migrate.PackrMigrationSource{
+		Box: packr.NewBox("./migrations/"),
+	}
+
+	// применение миграций
+	n, err := migrate.Exec(con, "mysql", migrations, migrate.Up)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Printf("Applied %d migrations!\n", n)
 	return db, nil
 }

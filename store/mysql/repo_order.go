@@ -67,7 +67,6 @@ func (r OrderRepo) AddThrough() bool {
 
 func (r OrderRepo) AddAutoincrement() bool {
 	for i := 1; i <= env.Config.InsertCount; i++ {
-
 		_, err := r.db.
 			From(goqu.I("auto_orders")).
 			Insert(orderRow{Date: time.Now()}).

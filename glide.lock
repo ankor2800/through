@@ -1,14 +1,42 @@
-hash: ff8be4f0dd0619f416cd213b2165ae2bb00f3ac08c00871fe117757efa4d866a
-updated: 2019-05-24T10:50:48.009912651+03:00
+hash: a663031db00d3d4e01bee22f7c6923a244be29f89213a45028e30cd2aa624587
+updated: 2019-06-10T12:02:40.025245603+03:00
 imports:
 - name: github.com/go-sql-driver/mysql
   version: 72cd26f257d44c1114970e19afddcd812016007e
+- name: github.com/gobuffalo/envy
+  version: 043cb4b8af871b49563291e32c66bb84378a60ac
+- name: github.com/gobuffalo/packd
+  version: 9efbb667f2024a9370cadda45a57a0657c88a6fb
+- name: github.com/gobuffalo/packr
+  version: dfd81c51ee2a50e5cf59d1eb170c5afe897c8a80
+- name: github.com/gobuffalo/syncx
+  version: 33c29581e754bd354236e977dfe426e55331c45d
 - name: github.com/gorilla/mux
   version: ed099d42384823742bba0bf9a72b53b55c9e2e38
+- name: github.com/joho/godotenv
+  version: 5c0e6c6ab1a0a9ef0a8822cba3a05d62f7dad941
 - name: github.com/kelseyhightower/envconfig
-  version: f611eb38b3875cc3bd991ca91c51d06446afa14c
+  version: 0b417c4ec4a8a82eecc22a1459a504aa55163d61
+- name: github.com/pkg/errors
+  version: 27936f6d90f9c8e1145f11ed52ffffbfdb9e0af7
+- name: github.com/rogpeppe/go-internal
+  version: 6f68bf1e81f8552c7dbd47f3bc4371c2db0941a6
+  subpackages:
+  - modfile
+  - module
+  - semver
+- name: github.com/rubenv/sql-migrate
+  version: 54bad0a9b051368ffec9cd2b869789c2b8eaea35
+  subpackages:
+  - sqlparse
+- name: google.golang.org/appengine
+  version: de285f9b71d302e953472c27f2152dfe8fac5195
+  subpackages:
+  - cloudsql
 - name: gopkg.in/doug-martin/goqu.v5
   version: 6803bc2ea3462276f0e87814761a787d5537c4eb
   subpackages:
   - adapters/mysql
+- name: gopkg.in/gorp.v1
+  version: 6a667da9c028871f98598d85413e3fc4c6daa52e
 testImports: []
